@@ -1,4 +1,6 @@
-class Pattern{
+import java.util.Scanner;
+
+class Pattern1{
 
     static void pattern1(int n){
         for(int i=1;i<=n;i++){
@@ -304,6 +306,13 @@ class Pattern{
     }
     
     public static void main(String args[]){
-        pattern22(5);
+        try (Scanner s = new Scanner(System.in)) {
+            int count = 1;
+            while(s.hasNextInt()){
+                int n = s.nextInt();
+                pattern18(n);
+                System.out.println("------------------------( " + count++ + " )");
+            }
+        }
     }
 }
